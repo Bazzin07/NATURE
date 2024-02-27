@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nav-bar {
+    cursor: pointer;
+    width: 100%;
+    position: absolute;
+    margin-top: 2.5rem;
+    height: 4rem;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-deck {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.info {
+     width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 50px;
+    color: white;
+}
+
+
+
+.container {
+    min-height: 100vh;
+}
+
+.cards {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+    width: 33.33%;
+    height: 100vh;
+    position: relative;
+}
+
+.forest{
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    clip-path: polygon(71% 0, 100% 47%, 72% 100%, 0 100%, 0 0);
+    z-index: 1;
+    background-image: url(./images/forest.jpg);
+    background-position: center;
+    background-size: 120% 100%;
+    filter: brightness(70%);
+    transition: 0.75s ease;
+    cursor: url('./images/leaf.png') , auto;
+
+}
+
+.forest:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.l1 {
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    left : 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 11;
+    background-image: url("./images/leaf(1).png");
+    background-color: transparent;
+    border: none;
+
+}
+
+.leaf {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: 1s ease;
+    
+}
+
+#image1 {
+    height: 100vh;
+    width: 50%;
+    background-image: url("./images/forest.jpg") ;
+    background-size: 100% 100% ;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    
+    
+}
+#about1 {
+    height: 100vh;
+    width: 50%;
+    background-color: #644c09;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 1s ease; 
+}
+
+
+.abtforest {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: white;
+}
+
+.abtforest h1 {
+    margin-bottom: 1rem;
+}
+.f1 {
+    margin-top: 2rem;
+    width: 200px;
+    height: 50px;
+    background-color: #f0ca208f;
+    border: 0.5px solid white;
+    border-radius: 15px;
+    font-size: medium;
+    margin-left: 30%;
+}
+.f1:hover {
+    background-color: #f0d120;
+}
+.cards :nth-child(3) {
+    position: relative;
+    width: 40%;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    z-index: 1;
+    background-image: url(./images/snow.jpg);
+    filter: brightness(70%);
+    transition: 0.5s ease;
+    cursor: url('./images/snowflake.png') , auto ;
+}
+
+.cards :nth-child(3):hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.l3 {
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right : 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 13;
+    background-image: url("./images/leaf(1).png");
+    background-color: transparent;
+    border: none;
+
+}
+
+#image2 {
+    height: 100vh;
+    width: 50%;
+    background-image: url("./images/snow.jpg") ;
+    background-size: 100% 100% ;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    
+    
+}
+#about2 {
+    height: 100vh;
+    width: 50%;
+    background-color: #0070BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 1s ease; 
+}
+
+.abtsnow {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: white;
+}
+
+.abtsnow h1 {
+    margin-bottom: 1rem;
+}
+
+
+.snowflake {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 11;
+    transition: 1s ease;
+    
+}
+
+.f3 {
+    margin-top: 2rem;
+    width: 200px;
+    height: 50px;
+    background-color: #20a4f08f;
+    border: 0.5px solid white;
+    border-radius: 15px;
+    font-size: medium;
+    margin-left: 30%;
+}
+.f3:hover {
+    background-color: #20c6f0;
+}
+
+.middle-content {
+    position: absolute;
+    top: 0;
+    left: calc(33.33% - 160px); 
+    width: calc(33.33% + 295px); 
+    height: 100%;
+    clip-path: polygon(75% 0, 100% 47%, 75% 100%, 0 100%, 0 0) polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    background-image: url(./images/desert.jpg);
+    background-position: center;
+    background-size: 130% 100%;
+    filter: brightness(70%);
+    transition: 0.5s ease;
+    cursor: url('./images/desert.png') , auto;
+}
+
+.middle-content:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.l2 {
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right : 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 13;
+    background-image: url("./images/leaf(1).png");
+    background-color: transparent;
+    border: none;
+
+}
+
+#image3 {
+    height: 100vh;
+    width: 50%;
+    background-image: url("./images/desert.jpg") ;
+    background-size: 100% 100% ;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    
+    
+}
+#about3 {
+    height: 100vh;
+    width: 50%;
+    background-color: #0070BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 1s ease; 
+}
